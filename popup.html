@@ -3,75 +3,212 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet/scss" type="text/scss" href="/carousel.scss">
-        <script src="/carousel_controls.js"></script>
+        <style>
+          * {
+            margin: 0;
+            padding: 0;
+          }
+          *, *:after, *:before {
+            box-sizing: border-box;
+          }
+          html {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizelegibility;
+          }
+          html, body {
+            margin: 1em;
+            padding: 1em;
+          }
+          body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 100%;
+          }
+          ul li {
+            list-style-type: none;
+          }
+          .slider--teams {
+            position: relative;
+            top: 280%;
+            min-width: 750px;
+            opacity: 0;
+          }
+          .slider--teams .slider--teams__team {
+            position: relative;
+            overflow: hidden;
+          }
+          #list {
+            position: relative;
+            backface-visibility: hidden;
+            transform: translate3d(0, 0, 0);
+          }
+          #list li {
+            position: relative;
+            display: inline-block;
+            float: left;
+            text-align: center;
+          }
+          #list li figure {
+            cursor: pointer;
+            margin: 1em;
+            opacity: 0.5;
+            backface-visibility: hidden;
+            transition: transform 450ms cubic-bezier(0.445, 0.05, 0.55, 0.95), opacity 450ms ease-in-out;
+            transform: scale(0.5) translateZ(0px);
+          }
+          #list li figure:hover {
+            opacity: 0.8;
+            transform: scale(0.6) translateZ(0px);
+          }
+          #list li figure:active {
+            opacity: 1;
+            transform: scale(0.7) translateZ(0px);
+          }
+          #list li figure > div {
+            border-radius: 5px;
+            position: relative;
+            margin: 2rem auto;
+            width: 120px;
+            height: 120px;
+            overflow: hidden;
+            transform: rotate(45deg) translateZ(0px);
+          }
+          #list li figure > div > div {
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/teams.jpg) no-repeat;
+            background-size: cover;
+            background-position: 0px 0px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 170px;
+            height: 170px;
+            transform: rotate(-45deg) translate(0%, -70%);
+          }
+          #list li figure figcaption h2 {
+            color: #333;
+            font-size: 1.6rem;
+            font-weight: 800;
+          }
+          #list li figure figcaption p {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 400;
+          }
+          #list li:nth-child(1) figure > div > div {
+            background-position: 0px 0px !important;
+          }
+          #list li:nth-child(2) figure > div > div {
+            background-position: 0px 20% !important;
+          }
+          #list li:nth-child(3) figure > div > div {
+            background-position: 0px 40% !important;
+          }
+          #list li:nth-child(4) figure > div > div {
+            background-position: 0px 60% !important;
+          }
+          #list li:nth-child(5) figure > div > div {
+            background-position: 0px 80% !important;
+          }
+          #list li:nth-child(6) figure > div > div {
+            background-position: 0px 100% !important;
+          }
+          .active {
+            opacity: 1 !important;
+            transform: scale(1) translateZ(0px) !important;
+          }
+          .cf:before, .cf:after {
+            content: " ";
+            display: table;
+          }
+          .cf:after {
+            clear: both;
+          }
+          .cf {
+            *zoom: 1;
+          }
+        </style>
     </head>
     <body>
-        <section class="testimonials">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12">
-                  <div id="customers-testimonials" class="owl-carousel">
-        
-                    <!--TESTIMONIAL 1 -->
-                    <div class="item">
-                      <div class="shadow-effect">
-                        <img class="img-responsive" src="https://image.freepik.com/free-photo/spaghetti-with-carbonara-sauce_1216-324.jpg" alt="">
-                        <div class="item-details">
-                            <h5>Chicken for two Roasted <span>$21</span></h5>
-                            <p>There was a time when Chinese food in this country meant (Americanized) Cantonese food.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--END OF TESTIMONIAL 1 -->
-                    <!--TESTIMONIAL 2 -->
-                    <div class="item">
-                      <div class="shadow-effect">
-                        <img class="img-responsive" src="https://image.freepik.com/free-photo/dishes-with-healthy-waffles_1220-367.jpg" alt="">
-                        <div class="item-details">
-                            <h5>Chicken for two Roasted <span>$21</span></h5>
-                            <p>There was a time when Chinese food in this country meant (Americanized) Cantonese food.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--END OF TESTIMONIAL 2 -->
-                    <!--TESTIMONIAL 3 -->
-                    <div class="item">
-                      <div class="shadow-effect">
-                        <img class="img-responsive" src="https://image.freepik.com/free-photo/top-view-of-tasty-noodles-with-prawns_1203-1769.jpg" alt="">
-                        <div class="item-details">
-                            <h5>Chicken for two Roasted <span>$21</span></h5>
-                            <p>There was a time when Chinese food in this country meant (Americanized) Cantonese food.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--END OF TESTIMONIAL 3 -->
-                    <!--TESTIMONIAL 4 -->
-                    <div class="item">
-                      <div class="shadow-effect">
-                        <img class="img-responsive" src="https://image.freepik.com/free-photo/burguer-with-garnish_1088-72.jpg" alt="">
-                        <div class="item-details">
-                            <h5>Chicken for two Roasted <span>$21</span></h5>
-                            <p>There was a time when Chinese food in this country meant (Americanized) Cantonese food.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--END OF TESTIMONIAL 4 -->
-                    <!--TESTIMONIAL 5 -->
-                    <div class="item">
-                      <div class="shadow-effect">
-                        <img class="img-responsive" src="https://image.freepik.com/free-photo/delicious-pastry-with-chicken_1203-1616.jpg" alt="">
-                        <div class="item-details">
-                            <h5>Chicken for two Roasted <span>$21</span></h5>
-                            <p>There was a time when Chinese food in this country meant (Americanized) Cantonese food.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!--END OF TESTIMONIAL 5 -->
-                  </div>
+      <div class="slider--teams">
+        <div class="slider--teams__team">
+          <ul id="list" class="cf">
+            
+            <li>
+              <figure class="active">
+                <div>
+                  <div></div>
                 </div>
-              </div>
-            </div>
-        </section>
+                <figcaption>
+                  <h2>Billie</h2>
+                  <p>Head of Team</p>
+                </figcaption>
+              </figure>
+            </li>
+            
+            <li>
+              <figure>
+                <div>
+                  <div></div>
+                </div>
+                <figcaption>
+                  <h2>Roger</h2>
+                  <p>Art Director</p>
+                </figcaption>
+              </figure>
+            </li>
+            
+            <li>
+              <figure>
+                <div>
+                  <div></div>
+                </div>
+                <figcaption>
+                  <h2>Wendy</h2>
+                  <p>Designer</p>
+                </figcaption>
+              </figure>
+            </li>
+            
+            <li>
+              <figure>
+                <div>
+                  <div></div>
+                </div>
+                <figcaption>
+                  <h2>Bill</h2>
+                  <p>Development</p>
+                </figcaption>
+              </figure>
+            </li>
+            
+            <li>
+              <figure>
+                <div>
+                  <div></div> 
+                </div>
+                <figcaption>
+                  <h2>Lorraine</h2>
+                  <p>Front-End Development</p>
+                </figcaption>
+              </figure>
+            </li>
+            
+            <li>
+              <figure>
+                <div>
+                  <div></div> 
+                </div>
+                <figcaption>
+                  <h2>Wesley</h2>
+                  <p>Marketing Lead</p>
+                </figcaption>
+              </figure>
+            </li> 
+          </ul>
+        </div>
+      </div>
+      <script type='application/x-javascript' src="./jquery.min.js"></script>
+      <script src="/carousel_controls.js"></script>
+      <script type='application/x-javascript' src="./velocity.min.js"></script>
     </body>
 </html>

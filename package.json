@@ -1,0 +1,30 @@
+{
+  "name": "templogger",
+  "version": "1.0.0",
+  "description": "Simple temperature plugin ",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "gsap": "^3.2.4",
+    "react-redux": "^7.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^7.1.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\turl =\"ssh://git@github.com/gacheruevans/test-plugin.git\""
+  },
+  "keywords": [
+    "Temperature",
+    "Logger",
+    "Plugin"
+  ],
+  "author": "Evans Gacheru",
+  "license": "MIT"
+}
