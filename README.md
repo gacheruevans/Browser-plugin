@@ -2,7 +2,11 @@
 A simple browser plugin that works on Chrome, Mozilla, Edge and Opera.
 
 ## Goal.
-- Create a carousel that has photos that a user can rate.
+- Create a carousel that displays users profile bio links.
+
+![alt text][logo]
+
+[logo]: https://github.com/gacheruevans/test-plugin/blob/readme-update/images/demo.png
 
 ## Running the plugin Locally
 
