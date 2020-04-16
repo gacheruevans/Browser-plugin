@@ -71,10 +71,10 @@
             width: 120px;
             height: 120px;
             overflow: hidden;
-            transform: rotate(45deg) translateZ(0px);
+            transform: rotate(0deg) translateZ(0px);
           }
           #list li figure > div > div {
-            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/953/teams.jpg) no-repeat;
+            
             background-size: cover;
             background-position: 0px 0px;
             position: absolute;
@@ -82,36 +82,25 @@
             left: 50%;
             width: 170px;
             height: 170px;
-            transform: rotate(-45deg) translate(0%, -70%);
+            transform: rotate(0deg) translate(-50%, -50%);
+          }
+          #list li figure > figcaption {
+            width: 240px;
           }
           #list li figure figcaption h2 {
             color: #333;
             font-size: 1.6rem;
             font-weight: 800;
+            padding-left: 40px;
           }
-          #list li figure figcaption p {
+          #list li figure figcaption > a {
             color: #666;
             font-size: 0.9rem;
             font-weight: 400;
+            padding-top: 20px;
+            padding-left: 40px;
           }
-          #list li:nth-child(1) figure > div > div {
-            background-position: 0px 0px !important;
-          }
-          #list li:nth-child(2) figure > div > div {
-            background-position: 0px 20% !important;
-          }
-          #list li:nth-child(3) figure > div > div {
-            background-position: 0px 40% !important;
-          }
-          #list li:nth-child(4) figure > div > div {
-            background-position: 0px 60% !important;
-          }
-          #list li:nth-child(5) figure > div > div {
-            background-position: 0px 80% !important;
-          }
-          #list li:nth-child(6) figure > div > div {
-            background-position: 0px 100% !important;
-          }
+        
           .active {
             opacity: 1 !important;
             transform: scale(1) translateZ(0px) !important;
@@ -136,11 +125,11 @@
             <li>
               <figure class="active">
                 <div>
-                  <div></div>
+                  <div><img src="./images/Octocat-github.svg" width="170px" height= "170px" /></div>
                 </div>
                 <figcaption>
-                  <h2>Billie</h2>
-                  <p>Head of Team</p>
+                  <h2>GitHub Profile</h2>
+                  <a href="https://www.linkedin.com/in/evansgacheru/" target="_blank">gacheruevans</a>
                 </figcaption>
               </figure>
             </li>
@@ -148,11 +137,11 @@
             <li>
               <figure>
                 <div>
-                  <div></div>
+                  <div><img src="./images/linkedin.png" width="170px" height= "170px" /></div>
                 </div>
                 <figcaption>
-                  <h2>Roger</h2>
-                  <p>Art Director</p>
+                  <h2>LinkedIn Profile</h2>
+                  <a href="https://www.linkedin.com/in/evansgacheru/" target="_blank">Evan Gacheru</a>
                 </figcaption>
               </figure>
             </li>
@@ -160,11 +149,11 @@
             <li>
               <figure>
                 <div>
-                  <div></div>
+                  <div><img src="./images/medium.png" width="170px" height= "170px" /></div>
                 </div>
                 <figcaption>
-                  <h2>Wendy</h2>
-                  <p>Designer</p>
+                  <h2>Medium Profile</h2>
+                  <a href="https://medium.com/@gacheruevans0" target="_blank">@gacheruevans0</a>
                 </figcaption>
               </figure>
             </li>
@@ -172,38 +161,14 @@
             <li>
               <figure>
                 <div>
-                  <div></div>
+                  <div><img src="./images/wordpress.png" width="170px" height= "170px" /></div>
                 </div>
                 <figcaption>
-                  <h2>Bill</h2>
-                  <p>Development</p>
+                  <h2>Wordpress Profile</h2>
+                  <a href="https://evansgacheru.wordpress.com/" target="_blank">Blog</a>
                 </figcaption>
               </figure>
             </li>
-            
-            <li>
-              <figure>
-                <div>
-                  <div></div> 
-                </div>
-                <figcaption>
-                  <h2>Lorraine</h2>
-                  <p>Front-End Development</p>
-                </figcaption>
-              </figure>
-            </li>
-            
-            <li>
-              <figure>
-                <div>
-                  <div></div> 
-                </div>
-                <figcaption>
-                  <h2>Wesley</h2>
-                  <p>Marketing Lead</p>
-                </figcaption>
-              </figure>
-            </li> 
           </ul>
         </div>
       </div>
