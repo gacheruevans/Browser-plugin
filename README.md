@@ -3,8 +3,9 @@ A simple browser plugin that works on Chrome, Mozilla, Edge and Opera.
 
 ## Goal.
 - Create a carousel that displays users profile bio links.
-  
+
 ![alt text][logo]
+
 [logo]: https://github.com/gacheruevans/test-plugin/tree/master/images/demo.png
 
 ## Running the plugin Locally
