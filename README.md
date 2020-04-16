@@ -6,7 +6,7 @@ A simple browser plugin that works on Chrome, Mozilla, Edge and Opera.
 
 ![alt text][logo]
 
-[logo]: https://github.com/gacheruevans/test-plugin/master/images/demo.png
+[logo]: https://github.com/gacheruevans/test-plugin/blob/readme-update/images/demo.png
 
 ## Running the plugin Locally
 
